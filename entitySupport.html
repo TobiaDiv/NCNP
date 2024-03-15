@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Service Details</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/entitySupport.css" />
+
+</head>
+
+<body>
+    <div class="rectangle-nav"></div>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <div class="group-42687-dd6">
+                    <img class="vector-Bec" src="./assets/vector-opx.png" />
+                    <div class="group-42686-Jz8">
+                        <p class="item--FPa">صهيب سليمان الذكير</p>
+                        <p class="item--UXE">منصة احسان للعمل الخيري</p>
+                    </div>
+                </div>
+                <img class="group-42688-wvc" src="./assets/group-42688-4ex.png" />
+            </div>
+            <a class="navbar-brand">
+                <img class="ncnp-logo-frc" src="./assets/ncnp-logo-fdn.png" />
+            </a>
+        </div>
+    </nav>
+    <div class="rectangle-foot"></div>
+    <!-- =========================================================================== -->
+    <main>
+
+        <div class="side-nav">
+            <ul class="side-nav-list">
+                <li><img src="./assets/ic1.png" alt="#"></li>
+                <li><img src="./assets/ic2.png" alt="#"></li>
+                <li><img src="./assets/ic3.png" alt="#"></li>
+                <li><img src="./assets/ic4.png" alt="#"></li>
+                <li><img src="./assets/ic5.png" alt="#"></li>
+            </ul>
+        </div>
+        <div class="head">
+            <div class="header row">
+                <div class="head-ic">
+                    <i class="fas fa-hand-holding-droplet"></i>
+                </div>
+                <div>
+                    <h3>
+                        دعوم الكيانات
+                    </h3>
+                    <h6>إدارة دعوم المؤسسات والجمعيات الأهلية الموجهه لغير الافراد.</h6>
+                </div>
+            </div>
+            <div class="body row">
+                <div class="container p-5" style="background-color: #fff;">
+                    <div class="row">
+                        <div class="col-8">
+                            <p class="sec-addr" style="color: #333333; font-weight: bold;">
+                                 هذه الصفحة مخصصة لتسجيل وتتبع الدعوم المقدمة من المؤسسات للجمعيات، الأفراد، والمبادرات
+                                المجتمعية. نهدف من خلال هذه الخدمة إلى تحقيق الشفافية وضمان الحوكمة الفعّالة لعملية
+                                توزيع الدعوم.
+                            </p>
+                        </div>
+                        <div class="col-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div id="drop-area"
+                                        class="border rounded d-flex justify-content-center align-items-center"
+                                        style="height: 200px; cursor: pointer; background: rgb(3 209 171 / 20%); border: 1px dashed #03D1AB !important;">
+                                        <div class="text-center">
+                                            <i class="fas fa-cloud-arrow-up"
+                                                style="font-size: 48px; color: rgb(3 209 171);"></i>
+                                            <h3 class="mt-3">سحب واسقاط</h3>
+                                            <p>الامتدادات المطلوبة <strong>XLSX</strong></p>
+                                            <p>أو يمكنك الضغط <a style="color: #03D1AB;">لتصفح جهازك</a></p>
+                                        </div>
+                                    </div>
+                                    <p>إجمالي حجم الملفات المسموح به هو 10 ميغا بايت</p>
+                                    <input type="file" id="fileElem" multiple accept="image/*" class="d-none">
+                                    <button class="btn btn-success btn-block mt-lg-5"
+                                        style="background: rgb(3 209 171);">ارسال</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================================ -->
+    <footer>
+        <h5>كل الحقوق محفوظة المركز الوطني لتنمية القطاع غير الربحي2023</h5>
+    </footer>
+    <!-- ============================================================================ -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+    <script>
+        let dropArea = document.getElementById("drop-area");
+
+        ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+            document.body.addEventListener(eventName, preventDefaults, false);
+        });
+
+        ["dragenter", "dragover"].forEach((eventName) => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ["dragleave", "drop"].forEach((eventName) => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        dropArea.addEventListener("drop", handleDrop, false);
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        function highlight(e) {
+            dropArea.classList.add("highlight");
+        }
+
+        function unhighlight(e) {
+            dropArea.classList.remove("highlight");
+        }
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handleFiles(files);
+        }
+
+        function handleFiles(files) {
+            [...files].forEach(uploadFile);
+        }
+
+        function uploadFile(file) {
+            console.log("Uploading", file.name);
+        }
+
+        dropArea.addEventListener("click", () => {
+            fileElem.click();
+        });
+
+        let fileElem = document.getElementById("fileElem");
+        fileElem.addEventListener("change", function (e) {
+            handleFiles(this.files);
+        });
+    </script>
+</body>
+
+</html>
