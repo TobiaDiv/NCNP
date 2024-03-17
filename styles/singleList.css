@@ -1,0 +1,406 @@
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 3rem;
+    font-family: "Cairo", sans-serif;
+    font-size: .938rem;
+    background-color: #F5F5F5;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+}
+
+.rectangle-nav {
+    width: 100%;
+    height: 12px;
+    background-color: #03d1ab;
+}
+
+.navbar {
+    height: 120px;
+}
+
+.rectangle-foot {
+    width: 100%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.group-42688-wvc {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.group-42687-dd6 {
+    margin-right: 1.6053rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.group-42687-dd6 .vector-Bec {
+    margin: 0rem 1.7rem 0rem 0rem;
+    width: 1.2875rem;
+    height: 0.7rem;
+    object-fit: contain;
+    vertical-align: top;
+    flex-shrink: 0;
+}
+
+.group-42687-dd6 .group-42686-Jz8 {
+    height: 100%;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.group-42687-dd6 .group-42686-Jz8 .item--FPa {
+    margin-bottom: 0.0678rem;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.7142857143;
+    color: #005364;
+    font-family: 29LT Bukra, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.group-42687-dd6 .group-42686-Jz8 .item--UXE {
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 2.1818181818;
+    color: #818181;
+    font-family: 29LT Bukra, 'Source Sans Pro';
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.ncnp-logo-frc {
+    width: 220px;
+}
+
+.image-back {
+    width: 18px;
+    margin: 6px;
+}
+
+.ncnp-logo-home {
+    position: absolute;
+    width: 90px;
+    right: 3px;
+    top: 3px;
+}
+
+.d-main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(./assets/home-caru.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.head {
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    margin-top: 0.5rem;
+}
+
+.header {
+    padding: 0.5rem;
+    background: #03d1ab;
+    flex-wrap: nowrap;
+}
+
+.header h3 {
+    color: #005364;
+}
+
+.header h6 {
+    color: #333333;
+}
+
+.head-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    background: #fff;
+    border-radius: 10px;
+    color: #005364;
+    font-size: 50px;
+    padding: 0.5rem;
+}
+
+.main-card {
+    position: absolute;
+    top: 45px;
+    left: 25px;
+    direction: rtl;
+    padding: 0.5rem;
+    z-index: 99;
+}
+
+.list-img {
+    padding: 0.5rem;
+    background-color: #F5F5F5;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+}
+
+.side-nav {
+    margin: 0 2rem;
+}
+
+.side-nav-list {
+    display: flex;
+    background: #005364;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+
+.side-nav-list li {
+    margin: 1.5rem 0;
+}
+
+.head-addr {
+    color: #005364;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.head-addr::after {
+    content: "";
+    background-color: #E0E0E0;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+}
+
+.head-addr::before {
+    content: "";
+    background-color: #03d1ab;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+}
+
+.sec-addr {
+    color: #333333;
+}
+
+.hala {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #91ebda;
+    border-radius: 50%;
+    border: 17px solid #cdf6ee;
+}
+
+.hala i {
+    color: #005364;
+    font-size: 26px;
+}
+
+.arrow {
+    background-color: #F5F5F5;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+#drop-area:hover {
+    background: rgb(3 209 171 / 10%) !important;
+}
+
+.fun1 {
+    background: #F5F5F5;
+    padding: 0.5rem;
+
+}
+
+.fun1 h3 {
+    color: #005364;
+    position: relative;
+}
+
+.fun1 h3::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: #03d1ab;
+    border-radius: 50%;
+    position: absolute;
+    right: -25px;
+    top: 10px;
+}
+.fun2{
+    margin: 0 0.5rem;
+}
+.fun2 span {
+    color: #03d1ab;
+}
+
+.fun2 input[type=search]:focus {
+    border: #03d1ab !important;
+    outline-color: #03d1ab !important;
+}
+
+.fun3 select{
+    border: #03d1ab;
+}
+.fun3 select option span{
+    font-weight: bolder;
+    color: #005364;
+}
+
+.fun4{
+    color: #03d1ab;
+}
+.fun4 i{
+    margin: 0 0.5rem;
+}
+
+.fun5 button{
+    margin: 0 0.25rem;
+}
+
+ .nav-tabs .nav-link.active{
+    color: #005364 !important;
+ }
+ .nav-tabs .nav-link{
+    font-size: 1rem;
+    font-weight: bolder;
+ }
+
+ .statist .card{
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+ }
+
+ .status{
+    background: #F5F5F5;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+ }
+ .status i{
+    margin: 0 0.5rem;
+ }
+
+.head h3{
+    color: #005364;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.head h3::before{
+    content: "";
+    display: inline-block;
+    margin: 0.5rem;
+    background-color: #03D1AB;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.head p{
+    color: #828282;
+    font-size: 18px;
+}
+
+.details .head-ic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    background: #fff;
+    border-radius: 10px;
+    color: #005364;
+    font-size: 25px;
+    padding: 0.5rem;
+}
+.details .header{
+    background-color: #B4F9EC;
+}
+.details .header .h3{
+    font-size: 26px;
+}
+.details .header .h6{
+    font-size: 0.75rem;
+}
+.details .modal-header,.modal-body{
+    background-color: #005364;
+    color: #fff;
+}
+.details .sub-body{
+    position: relative;
+    flex: 1 1 auto;
+    padding: var(--mdb-modal-padding);
+}
+.progress{
+    --mdb-progress-bg: #03D1AB;
+    --mdb-progress-height:20px
+}
+.mos{
+    color: #005364;
+}
+.d-mos{
+    color: #03D1AB;
+}
+
+footer {
+    background-color: #005364;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+}
+
+footer h5 {
+    padding: 0.5rem;
+    color: #fff;
+}
